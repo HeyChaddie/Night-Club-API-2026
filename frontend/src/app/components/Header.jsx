@@ -9,7 +9,7 @@ export function Header() {
   return (
     <>
       <header id="home" className="flex items-center justify-between bg-black p-4 text-white">
-        <img src="/assets/logo.png" alt="Logo" className="h-12 w-auto" />
+        <img src="/assets/logo.png" href="/" alt="Logo" className="h-12 w-auto" />
         <nav aria-label="Hovedmenu" className="hidden items-center gap-8 md:flex pr-10">
           <a href="/">HOME</a>
           <a href="/eventsdetail">EVENTS</a>

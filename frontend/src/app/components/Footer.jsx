@@ -1,5 +1,9 @@
 "use client";
 
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaSnapchatGhost } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+
 export function Footer() {
   return (
     <footer className="relative text-white text-center p-6 bg-[url('/assets/bg/footerbg.jpg')] bg-cover bg-center bg-no-repeat justify-center items-center">
@@ -14,13 +18,19 @@ export function Footer() {
         <p>SAT-SUN 11 PM - 5 AM</p>
         <h2 className=" text-lg font-bold mb-2 mt-4 text-white m-12">Stay Connected With Us</h2>
         <div className="flex justify-center space-x-4 mb-4">
-          <p>Facebook</p>
-          <p>Snapchat</p>
-          <p>Instagram</p>
+          <div className="border border-white  p-2">
+            <FaFacebookSquare />
+          </div>
+          <div className="border border-white  p-2">
+            <FaSnapchatGhost />
+          </div>
+          <div className="border border-white  p-2">
+            <FaInstagram />
+          </div>
         </div>
-        <p className="text-grey">Night Club</p>
-        <p className="text-grey">All Rights Reserved</p>
-        <p className="text-grey m-12"> Copyright &copy; NightClub</p>
+        <p className="text-white">Night Club</p>
+        <p className="text-white">All Rights Reserved</p>
+        <p className="text-white m-12"> Copyright &copy; NightClub</p>
       </div>
       <div className="hidden md:flex flex-row justify-center items-center gap-8 text-left">
         <div className="relative z-10 hidden md:block w-xs">
@@ -72,16 +82,22 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="hidden md:flex flex-row justify-center items-center gap-30 mt-8">
+      <div className="relative z-10 hidden md:flex flex-row justify-center items-center gap-30 mt-8 text-white">
         <div className="hidden md:block flex flex-row">
           <p className="text-white text-sm">Night Club - All Rights Reserved</p>
         </div>
         <div className="hidden md:block flex flex-row">
-          <h2 className=" text-lg font-bold mb-2 mt-4 text-white m-12">Stay Connected With Us</h2>
+          <h2 className=" text-lg font-bold mb-2 mt-4 text-white m-12 text-sm">Stay Connected With Us</h2>
           <div className="flex justify-center space-x-4 mb-4">
-            <p>Facebook</p>
-            <p>Snapchat</p>
-            <p>Instagram</p>
+            <div className="border border-white  p-2">
+              <FaFacebookSquare />
+            </div>
+            <div className="border border-white  p-2">
+              <FaSnapchatGhost />
+            </div>
+            <div className="border border-white  p-2">
+              <FaInstagram />
+            </div>
           </div>
         </div>
         <p className="text-white text-sm"> Copyright &copy; NightClub</p>
