@@ -12,7 +12,7 @@ export function Footer() {
         <img src="/assets/logo.png" alt="Logo" className="mx-auto h-12 w-auto mb-4 p-2" />
         <h1 className=" text-2xl font-bold mb-2 text-pink-500 m-12">LOCATION</h1>
         <p>Kompagnistræde 278</p>
-        <p>1265 Køhenhavn H</p>
+        <p>1265 København H</p>
         <h1 className=" text-2xl font-bold mb-2 mt-4 text-pink-500 m-12">OPENING HOURS</h1>
         <p>WED-THU 10:30 TO 3 AM</p>
         <p>SAT-SUN 11 PM - 5 AM</p>
@@ -66,16 +66,14 @@ export function Footer() {
           <div className="relative z-10">
             <h1 className=" text-l font-bold mb-2 text-pink-500">RECENT POSTS</h1>
             <div className="flex justify-center space-x-4 mb-4">
-              <img src="/assets/content-img/recent_post1.jpg" alt="Recent Post 1" className="h-16 w-16 object-cover" />
               <div className="flex flex-col justify-center mx-auto">
-                <p className="text-white text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p className="text-white text-sm">It is a long established fact that a reader will be distracted by the readable... </p>
                 <p className="text-grey text-sm text-pink-500">5 hours ago</p>
               </div>
             </div>
             <div className="flex justify-center space-x-4 mb-4">
-              <img src="/assets/content-img/recent_post2.jpg" alt="Recent Post 2" className="h-16 w-16 object-cover" />
               <div className="flex flex-col justify-center mx-auto">
-                <p className="text-white text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p className="text-white text-sm">It is a long established fact that a reader will be distracted by the readable... </p>
                 <p className="text-grey text-sm text-pink-500">5 hours ago</p>
               </div>
             </div>
