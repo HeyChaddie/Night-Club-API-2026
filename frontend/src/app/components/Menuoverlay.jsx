@@ -22,7 +22,7 @@ export function Menuoverlay({ open, onClose }) {
         src="/assets/icon/Logo.svg"
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-1/2 z-20 w-72 max-w-[85vw] -translate-x-1/2 -translate-y-1/2 opacity-30"
+        className="pointer-events-none absolute left-1/2 top-1/2 z-0 w-72 max-w-[85vw] -translate-x-1/2 -translate-y-1/2"
       />
       <div className="relative z-30 flex flex-1 flex-col">
         <div className="flex justify-end">
@@ -46,9 +46,9 @@ export function Menuoverlay({ open, onClose }) {
           </ul>
         </nav>
       </div>
-      <div>
+      <div className="relative z-0">
         <header className="flex items-center justify-between">
-          <img src="/assets/logo.png" href="/" alt="Logo" className="h-12 w-auto" />
+          <img src="/assets/logo.png" alt="Logo" className="h-12 w-auto" />
         </header>
         <div aria-hidden="true" className="pointer-events-none absolute bottom-6 right-1 z-0 flex -translate-x-1/2 flex-col gap-1.5">
           <span className="h-0.5 w-6 bg-white" />
