@@ -19,19 +19,16 @@ export default function Ejere() {
   }
 
   return (
-    <section
-      aria-label="ejere"
-      className="flex flex-col justify-items-center gap-4 bg-[url('/assets/bg/footerbg.jpg')] bg-cover bg-center bg-no-repeat"
-    >
-      <div className="mt-10">
-        <img src={images[slide]} alt={`ejere ${slide + 1}`} className="max-w-full" />
-        <h1 className="flex text-white">Alex</h1>
-        <p>
+    <section aria-label="ejere" className="flex flex-col items-center gap-4 bg-[url('/assets/bg/footerbg.jpg')] bg-cover bg-center bg-no-repeat">
+      <div className="mt-10 max-w-md px-4 text-center">
+        <img src={images[slide]} alt={`ejere ${slide + 1}`} className="mx-auto max-w-full" />
+        <h1 className="text-white mt-4">ALEX</h1>
+        <p className="mt-2">
           There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
           or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum,  you need to be sure there
           isn’t anything embarassing hidden in the middle of the text.
         </p>
-        <div className="flex flex-row">
+        <div className="mt-4 flex flex-row justify-center text-white gap-4">
           <div className="border border-white  p-2">
             <FaFacebookSquare />
           </div>
@@ -42,7 +39,7 @@ export default function Ejere() {
             <FaInstagram />
           </div>
         </div>
-        <div className="flex gap-4 text-white m-4">
+        <div className="m-4 flex justify-center gap-4 text-white">
           <button type="button" onClick={showPrevious}>
             Forrige
           </button>
