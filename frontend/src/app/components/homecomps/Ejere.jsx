@@ -38,8 +38,12 @@ export default function Ejere() {
 
   return (
     <>
-      <section aria-label="ejere" className="flex flex-col items-center gap-4 bg-[url('/assets/bg/footerbg.jpg')] bg-cover bg-center bg-no-repeat">
-        <div className="mt-10 ml-10 mr-10 px-4 text-center text-lg">
+      <section
+        aria-label="ejere"
+        className="relative isolate flex flex-col items-center gap-4 bg-[url('/assets/bg/footerbg.jpg')] bg-cover bg-center bg-no-repeat"
+      >
+        <div aria-hidden="true" className="absolute inset-0 bg-black/75" />
+        <div className="relative z-10 mt-10 ml-10 mr-10 px-4 text-center text-lg">
           <img src={currentOwner.image} alt={`Portræt af ${currentOwner.name}`} className="mx-auto max-w-full" />
           <h1 className="text-white text-2xl mt-4">{currentOwner.name}</h1>
           <p className="mt-2 text-white m-4">{currentOwner.description}</p>
