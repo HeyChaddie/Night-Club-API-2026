@@ -1,5 +1,6 @@
 import FeaturedEvents from "./components/homecomps/FeaturedEvents";
 import Test from "./components/test";
+import Recentblogs from "./components/homecomps/Recentblogs";
 import Maingallery from "./components/homecomps/Maingallery";
 import LatestVideo from "./components/homecomps/Latestvideo";
 import Ejere from "./components/homecomps/Ejere";
@@ -11,8 +12,7 @@ import { Footer } from "./components/Footer";
 export default function Home() {
   return (
     <>
-      
-      <Topheader />
+       <Topheader />
       <Header />
       <Test />
       <Sectionone />
@@ -20,6 +20,7 @@ export default function Home() {
      <Maingallery />
       <LatestVideo />
       <Ejere />
+    <Recentblogs />
       <Footer />
     </>
   );
