@@ -1,5 +1,6 @@
 import FeaturedEvents from "./components/homecomps/FeaturedEvents";
 import Test from "./components/test";
+import Maingallery from "./components/homecomps/Maingallery";
 import LatestVideo from "./components/homecomps/Latestvideo";
 import Ejere from "./components/homecomps/Ejere";
 import Sectionone from "./components/homecomps/Sectionone";
@@ -16,6 +17,7 @@ export default function Home() {
       <Test />
       <Sectionone />
     <FeaturedEvents />
+     <Maingallery />
       <LatestVideo />
       <Ejere />
       <Footer />
