@@ -37,20 +37,64 @@ const tracks = [
     id: "4",
     title: "None",
     cover: "/assets/content-img/track5.jpg",
-    audio: "/assets/media/fashion-red-tape.mp3",
+    audio: "/assets/media/euphoria.mp3",
   },
 ];
 
-const NightClubTrack = ({ tracks }) => {
+const NightClubTrack = () => {
   const [trackIndex, setTrackIndex] = useState(0);
   const [trackProgress, setTrackProgress] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  const [isShuffled, setIsShuffled] = useState(false);
   const audioRef = useRef(null);
 
-  const toPrevTrack = () => {};
-  const toNextTrack = () => {};
-  const shuffle = () => {};
+  // if: hvis index er lig med 0 (den første sang), skal der skiftes til det sidste index i array'et.
+  // else: hvis index er større end 0, skal der trækkes 1 fra (skiftes til forrige sang).
+  const toPrevTrack = () => {
+    if (trackIndex === 0) {
+      setTrackIndex(tracks.length - 1);
+    } else {
+      setTrackIndex(trackIndex - 1);
+    }
+    setIsPlaying(true);
+  };
+
+  // if: hvis index er lig med det sidste index i array'et, så skal der skiftes til index 0 (den første sang)
+  // else: hvis index IKKE er lig med det sidste index i array'et, skal der lægges 1 til (én sang frem).
+  const toNextTrack = () => {
+    if (isShuffled) {
+      const randomTrack = Math.floor(Math.random() * tracks.length);
+      setTrackIndex(randomTrack);
+      console.log(randomTrack);
+    } else {
+      if (trackIndex === tracks.length - 1) {
+        setTrackIndex(0);
+      } else {
+        setTrackIndex(trackIndex + 1);
+      }
+    }
+    setIsPlaying(true);
+  };
+
+  // useEffect bruges for at synkronisere state med musikken/audio-elementet.
+  // State har ikke noget med musikken/audio at gøre, den styrer knappens tilstand/ændring fra play til pause.
+  // Derfor bruges useEffect til at synkronisere, så musikken starter/stopper, når state ændres/der klikkes på knappen.
+  useEffect(() => {
+    if (isPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isPlaying, trackIndex]);
+
+  const shuffle = () => {
+    if (isShuffled === true) {
+      setIsShuffled(false);
+    } else {
+      setIsShuffled(true);
+    }
+  };
 
   return (
     <section className="flex flex-col justify-center items-center bg-black text-white">
@@ -60,7 +104,7 @@ const NightClubTrack = ({ tracks }) => {
       </header>
 
       <article className="flex flex-col justify-center items-center">
-        <h3 className="uppercase text-[20px] font-medium tracking-[2%] mt-10">Song Title</h3>
+        <h3 className="uppercase text-[20px] font-medium tracking-[2%] mt-10">{tracks[trackIndex].title}</h3>
 
         {/* track progress */}
         <figure className="relative w-full mt-10">
@@ -73,11 +117,14 @@ const NightClubTrack = ({ tracks }) => {
           <p className="mt-10">Current time / Duration</p>
         </div>
 
+        <audio src={tracks[trackIndex].audio} ref={audioRef}></audio>
+
         <AudioControls
           isPlaying={isPlaying}
           onPlayPauseClick={setIsPlaying}
           onPrevClick={toPrevTrack}
           onNextClick={toNextTrack}
+          isShuffled={isShuffled}
           onShuffleClick={shuffle}
           isMuted={isMuted}
           onMuteClick={setIsMuted}

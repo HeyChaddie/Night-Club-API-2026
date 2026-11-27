@@ -6,7 +6,7 @@ import { FaShuffle } from "react-icons/fa6";
 import { FaVolumeUp } from "react-icons/fa";
 import { FaVolumeMute } from "react-icons/fa";
 
-const AudioControls = ({ isPlaying, onPlayPauseClick, onPrevClick, onNextClick, onShuffleClick, isMuted, onMuteClick }) => {
+const AudioControls = ({ isPlaying, onPlayPauseClick, onPrevClick, onNextClick, isShuffled, onShuffleClick, isMuted, onMuteClick }) => {
   return (
     <div className="flex flex-col justify-center items-center">
       {/* ikoner: rewind, play, forward, shuffle */}
@@ -31,7 +31,7 @@ const AudioControls = ({ isPlaying, onPlayPauseClick, onPrevClick, onNextClick, 
         </button>
 
         {/* shuffle bør måske være pink, når den er aktiv/klikket på */}
-        <button type="button" aria-label="Shuffle" onClick={onShuffleClick} className="active:text-[#FF2A70]">
+        <button type="button" aria-label="Shuffle" onClick={onShuffleClick} className={isShuffled ? "text-[#FF2A70]" : "text-white"}>
           <FaShuffle className="text-3xl" />
         </button>
       </figure>
