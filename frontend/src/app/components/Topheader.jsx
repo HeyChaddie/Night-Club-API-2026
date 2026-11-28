@@ -10,11 +10,11 @@ export default function Topheader() {
         <h1 className="text-2xl tracking-widest "> HAVE A GOOD TIME </h1>
         <img src="/assets/bottom_line2.png" alt="" />
         <div className="flex flex-row">
-          <a href="/eventsdetail" className="m-4 p-4 outline outline-white">
+          <a href="/eventspage" className="m-4 p-4 outline outline-white">
             VIEW EVENTS
           </a>
           <a
-            href="/eventspage"
+            href="/bookingpage"
             className="relative overflow-hidden
    m-4 p-4 tracking-wider text-white
   bg-gradient-to-r from-[#f21b75] to-[#a915b5]

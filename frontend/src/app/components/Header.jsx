@@ -12,8 +12,8 @@ export function Header() {
         <img src="/assets/logo.png" href="/" alt="Logo" className="h-12 w-auto" />
         <nav aria-label="Hovedmenu" className="hidden items-center gap-8 md:flex pr-10">
           <a href="/">HOME</a>
-          <a href="/eventsdetail">EVENTS</a>
-          <a href="/eventspage">BOOK TABLE</a>
+          <a href="/eventspage">EVENTS</a>
+          <a href="/bookingpage">BOOK TABLE</a>
           <a href="/contactpage">CONTACT US</a>
         </nav>
         <button

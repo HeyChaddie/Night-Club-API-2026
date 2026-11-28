@@ -1,4 +1,4 @@
-export default function Headerevent() {
+export default function Booktableheader() {
   return (
     <section className="relative flex min-h-[150px] items-center justify-center bg-[url('/assets/bg/footerbg.jpg')] bg-cover bg-center bg-no-repeat p-6 text-center text-white">
       <div aria-hidden="true" className="absolute inset-0 bg-black/75"></div>
